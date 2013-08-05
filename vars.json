@@ -1,3 +1,5 @@
 {
-  "Title": "yazou.org APIs"
+  "Title": "yazou.org APIs",
+  "DateDomain": "date.yazou.org",
+  "DateRootUrl": "http://date.yazou.org"
 }
