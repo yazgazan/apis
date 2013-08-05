@@ -1,0 +1,10 @@
+{
+  "Listen": "localhost:2322",
+  "LogLevel": 0,
+  "Root": "www",
+  "Frame": "frame.html",
+  "Framable": [".txt", ".md"],
+  "Indexes": ["index.html", "index.md", "index.txt", "index"],
+  "Templates": [".html", ".txt", ".md"],
+  "Markdown": [".md"]
+}
