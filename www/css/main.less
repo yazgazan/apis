@@ -1,13 +1,16 @@
 
-@fontfamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-@titleColor: #555555;
+@fontfamily: monospace;
+@titleColor: #000;
+@textColor: #000;
+@bgColor: darken(#FFF, 3%);
 
 body {
-  background-color: #EEEEEE;
+  background-color: @bgColor;
 }
 
 * {
   font-family: @fontfamily;
+  color: @textColor;
 }
 
 h1 {
@@ -27,7 +30,7 @@ h3 {
 
 code {
   // background-color: #DDDDDD;
-  color: grey;
+  color: lighten(@textColor, 30%);
 }
 
 p, pre>code {
