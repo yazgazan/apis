@@ -63,3 +63,19 @@ GET {{.QueueRootUrl}}/pop?name=<queue_name>
 ```
 {"Name":"6489f3211586b2699658970aba26ff23","Count":42,"Value":"plop !"}
 ```
+
+## Export
+
+Export the queue,
+return an error if the queue size exceed the limit.
+
+### Url
+```
+GET {{.QueueRootUrl}}/export?name=<queue_name>
+```
+
+### Result Example
+```
+{"Name":"6489f3211586b2699658970aba26ff23","Count":3,"Queue":["toto","titi","tata"]}
+```
+
