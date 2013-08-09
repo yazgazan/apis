@@ -59,12 +59,13 @@ return the value (not encoded) and the queue size
 
 ### Url
 ```
-GET {{.QueueRootUrl}}/pop?name=<queue_name>
+GET {{.QueueRootUrl}}/pop?name=<queue_name>[&count=n]
 ```
 
 ### Result Example
 ```
-{"Name":"6489f3211586b2699658970aba26ff23","Count":42,"Value":"plop !"}
+GET {{.QueueRootUrl}}/pop?name=cb90c44eac6a0b5aff69e26c909b2207&count=3
+{"Name":"cb90c44eac6a0b5aff69e26c909b2207","Count":40,"Values":["plop !","toto","titi"]}
 ```
 
 
@@ -77,7 +78,7 @@ GET {{.QueueRootUrl}}/find?name=<queue_name>&value=<value1>[&value=<value2> ...]
 
 ### Result Example
 ```
-{"Name":"6489f3211586b2699658970aba26ff23","Count":42,"Offsets":{"patate !":42,"test":6}}
+{"Name":"6489f3211586b2699658970aba26ff23","Count":40,"Offsets":{"patate !":42,"test":6}}
 ```
 
 
