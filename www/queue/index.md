@@ -15,6 +15,7 @@ GET {{.QueueRootUrl}}/new
 {"Name": "6489f3211586b2699658970aba26ff23"}
 ```
 
+
 ## Count
 
 Return the queue size
@@ -29,6 +30,7 @@ GET {{.QueueRootUrl}}/count?name=<queue_name>
 {"Name":"6489f3211586b2699658970aba26ff23","Count":42}
 ```
 
+
 ## Push
 
 Push a new item to queue,
@@ -36,7 +38,7 @@ return the queue size
 
 ### Url
 ```
-GET {{.QueueRootUrl}}/push?name=<queue_name>&value=<value>
+GET {{.QueueRootUrl}}/push?name=<queue_name>[&uniq=(true|false)]&value=<value1>[&value=<value2> ...]
 ```
 
 ### Example
@@ -48,6 +50,7 @@ GET {{.QueueRootUrl}}/push?name=6489f3211586b2699658970aba26ff23&value=patate%20
 ```
 {"Name":"6489f3211586b2699658970aba26ff23","Count":43}
 ```
+
 
 ## Pop
 
@@ -63,6 +66,20 @@ GET {{.QueueRootUrl}}/pop?name=<queue_name>
 ```
 {"Name":"6489f3211586b2699658970aba26ff23","Count":42,"Value":"plop !"}
 ```
+
+
+## Find
+
+### Url
+```
+GET {{.QueueRootUrl}}/find?name=<queue_name>&value=<value1>[&value=<value2> ...]
+```
+
+### Result Example
+```
+{"Name":"6489f3211586b2699658970aba26ff23","Count":42,"Offsets":{"patate !":42,"test":6}}
+```
+
 
 ## Export
 
