@@ -12,7 +12,7 @@ GET {{.QueueRootUrl}}/new
 
 ### Result Example
 ```
-{"Name": "6489f3211586b2699658970aba26ff23"}
+{"name": "6489f3211586b2699658970aba26ff23"}
 ```
 
 
@@ -27,7 +27,7 @@ GET {{.QueueRootUrl}}/count?name=<queue_name>
 
 ### Result Example
 ```
-{"Name":"6489f3211586b2699658970aba26ff23","Count":42}
+{"name":"6489f3211586b2699658970aba26ff23","count":42}
 ```
 
 
@@ -48,7 +48,7 @@ GET {{.QueueRootUrl}}/push?name=6489f3211586b2699658970aba26ff23&value=patate%20
 
 ### Result
 ```
-{"Name":"6489f3211586b2699658970aba26ff23","Count":43}
+{"name":"6489f3211586b2699658970aba26ff23","count":43}
 ```
 
 
@@ -65,7 +65,7 @@ GET {{.QueueRootUrl}}/pop?name=<queue_name>[&count=n]
 ### Result Example
 ```
 GET {{.QueueRootUrl}}/pop?name=cb90c44eac6a0b5aff69e26c909b2207&count=3
-{"Name":"cb90c44eac6a0b5aff69e26c909b2207","Count":40,"Values":["plop !","toto","titi"]}
+{"name":"cb90c44eac6a0b5aff69e26c909b2207","count":40,"values":["plop !","toto","titi"]}
 ```
 
 
@@ -78,7 +78,7 @@ GET {{.QueueRootUrl}}/find?name=<queue_name>&value=<value1>[&value=<value2> ...]
 
 ### Result Example
 ```
-{"Name":"6489f3211586b2699658970aba26ff23","Count":40,"Offsets":{"patate !":42,"test":6}}
+{"name":"6489f3211586b2699658970aba26ff23","count":40,"offsets":{"patate !":42,"test":6}}
 ```
 
 
@@ -94,6 +94,6 @@ GET {{.QueueRootUrl}}/export?name=<queue_name>
 
 ### Result Example
 ```
-{"Name":"6489f3211586b2699658970aba26ff23","Count":3,"Queue":["toto","titi","tata"]}
+{"name":"6489f3211586b2699658970aba26ff23","count":3,"queue":["toto","titi","tata"]}
 ```
 
